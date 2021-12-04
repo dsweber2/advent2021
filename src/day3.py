@@ -94,5 +94,5 @@ print(oxygen * C02)
 
 if __name__ == "__main__":
     puzzle_input = get_puzzle_data(day=1)
-    sea_depths = [int(x) for x in puzzle_input]
+    bin_array = np.zeros(shape=(len(puzzle_input), len(puzzle_input[0])), dtype="bool")
     print(f"{count_increase(sea_depths)}")

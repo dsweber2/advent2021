@@ -86,7 +86,7 @@ def update_diag_lines(line_matrix, points):
         line_matrix[range(from_y, to_y, sign_y), range(from_x, to_x, sign_x)] += 1
 
 
-points = process_input(puzzle_input)
+points = process_input(example_input)
 x_points = get_x(points)
 y_points = get_y(points)
 diag_points = get_diagonal(points)
@@ -101,7 +101,7 @@ print(np.sum(line_count >= 2))
 
 # problem 2
 update_diag_lines(line_count, diag_points)
-
+print(line_count)
 print(np.sum(line_count >= 2))
 
 

@@ -12,7 +12,7 @@ def process_input(inn):
     return list(map(int, inn[0].split(",")))
 
 
-class lantern_fish:
+class lanternFish:
     fish_pop = np.zeros(shape=8, dtype=int)
     new_age = 8
     veteran_age = 6
@@ -26,7 +26,7 @@ class lantern_fish:
         self.veteran_age = veteran_age
         self.day = day
 
-    def pass_day(self, n_days=1):
+    def day(self, n_days=1):
         for _ in range(n_days):
             # how many new fish
             new_fish = self.fish_pop[0]
@@ -39,6 +39,15 @@ class lantern_fish:
 
     def count(self):
         return self.fish_pop.sum()
+
+
+s = example_input[0]
+gen = (int(x) for x in s.split(","))
+
+
+def f():
+    for x in s.split(","):
+        yield x
 
 
 init_dist = process_input(example_input)
